@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atacadão Farma Centro</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -23,9 +24,8 @@
       padding: 30px 20px;
       text-align: center;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      position: fixed;
+      position: sticky;
       top: 0;
-      width: 100%;
       z-index: 1000;
     }
 
@@ -39,6 +39,7 @@
       background: rgba(255, 255, 255, 0.1);
       padding: 10px 20px;
       border-radius: 10px;
+      backdrop-filter: blur(5px);
     }
 
     header h1::before {
@@ -52,9 +53,8 @@
       padding: 15px 0;
       text-align: center;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: fixed;
+      position: sticky;
       top: 110px;
-      width: 100%;
       z-index: 1000;
     }
 
@@ -79,7 +79,6 @@
       padding: 40px 20px;
       max-width: 1300px;
       margin: 0 auto;
-      margin-top: 160px;
     }
 
     .section.active {
@@ -195,10 +194,9 @@
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       max-width: 300px;
-      width: calc(100% - 40px);
+      width: 100%;
       max-height: 400px;
       overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
     }
 
     #cart-modal.active {
@@ -261,18 +259,10 @@
         font-size: 2em;
       }
 
-      nav {
-        top: 90px; /* Ajuste para a nova altura do header */
-      }
-
       nav a {
         margin: 0 10px;
         font-size: 1em;
         padding: 6px 12px;
-      }
-
-      .section {
-        margin-top: 140px; /* Ajuste para a nova altura do header + nav */
       }
 
       .section h2 {
@@ -317,25 +307,25 @@
     <h2>Perfumaria</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Desodorante Nivea">
+        <img src="imagens/desodorante_nivea.jpg" alt="Desodorante Nivea">
         <p>Desodorante Nivea</p>
         <p><strong>R$ 12,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Desodorante Nivea', 12.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Colônia Giovanna Baby">
+        <img src="imagens/colonia_giovanna_baby.jpg" alt="Colônia Giovanna Baby">
         <p>Colônia Giovanna Baby</p>
         <p><strong>R$ 29,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Colônia Giovanna Baby', 29.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Shampoo Elseve">
+        <img src="imagens/shampoo_elseve.jpg" alt="Shampoo Elseve">
         <p>Shampoo Elseve</p>
         <p><strong>R$ 18,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Shampoo Elseve', 18.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Perfume Floratta">
+        <img src="imagens/perfume_floratta.jpg" alt="Perfume Floratta">
         <p>Perfume Floratta</p>
         <p><strong>R$ 59,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Perfume Floratta', 59.90)">Adicionar ao Carrinho</button>
@@ -347,25 +337,25 @@
     <h2>Medicamentos Isentos de Prescrição</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Dipirona 500mg">
+        <img src="imagens/dipirona_500mg.jpg" alt="Dipirona 500mg">
         <p>Dipirona 500mg</p>
         <p><strong>R$ 4,50</strong></p>
         <button class="add-to-cart" onclick="addToCart('Dipirona 500mg', 4.50)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Paracetamol 750mg">
+        <img src="imagens/paracetamol_750mg.jpg" alt="Paracetamol 750mg">
         <p>Paracetamol 750mg</p>
         <p><strong>R$ 6,00</strong></p>
         <button class="add-to-cart" onclick="addToCart('Paracetamol 750mg', 6.00)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Antisséptico Bucal Listerine">
+        <img src="imagens/listerine.jpg" alt="Antisséptico Bucal Listerine">
         <p>Antisséptico Bucal Listerine</p>
         <p><strong>R$ 19,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Antisséptico Bucal Listerine', 19.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Omeprazol 20mg">
+        <img src="imagens/omeprazol_20mg.jpg" alt="Omeprazol 20mg">
         <p>Omeprazol 20mg</p>
         <p><strong>R$ 15,50</strong></p>
         <button class="add-to-cart" onclick="addToCart('Omeprazol 20mg', 15.50)">Adicionar ao Carrinho</button>
@@ -377,25 +367,25 @@
     <h2>Higiene Pessoal</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Sabonete Protex">
+        <img src="imagens/sabonete_protex.jpg" alt="Sabonete Protex">
         <p>Sabonete Protex</p>
         <p><strong>R$ 2,80</strong></p>
         <button class="add-to-cart" onclick="addToCart('Sabonete Protex', 2.80)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Creme Dental Colgate">
+        <img src="imagens/creme_dental_colgate.jpg" alt="Creme Dental Colgate">
         <p>Creme Dental Colgate</p>
         <p><strong>R$ 3,50</strong></p>
         <button class="add-to-cart" onclick="addToCart('Creme Dental Colgate', 3.50)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Fio Dental Oral-B">
+        <img src="imagens/fio_dental_oralb.jpg" alt="Fio Dental Oral-B">
         <p>Fio Dental Oral-B</p>
         <p><strong>R$ 8,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Fio Dental Oral-B', 8.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Desodorante Rexona">
+        <img src="imagens/desodorante_rexona.jpg" alt="Desodorante Rexona">
         <p>Desodorante Rexona</p>
         <p><strong>R$ 10,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Desodorante Rexona', 10.90)">Adicionar ao Carrinho</button>
@@ -407,25 +397,25 @@
     <h2>Linha Infantil</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Fralda Pampers M">
+        <img src="imagens/fralda_pampers_m.jpg" alt="Fralda Pampers M">
         <p>Fralda Pampers M</p>
         <p><strong>R$ 29,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Fralda Pampers M', 29.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Shampoo Johnson's Baby">
+        <img src="imagens/shampoo_johnsons_baby.jpg" alt="Shampoo Johnson's Baby">
         <p>Shampoo Johnson's Baby</p>
         <p><strong>R$ 11,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Shampoo Johnson's Baby', 11.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Creme para Assaduras Bepantol">
+        <img src="imagens/creme_bepantol.jpg" alt="Creme para Assaduras Bepantol">
         <p>Creme para Assaduras Bepantol</p>
         <p><strong>R$ 25,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Creme para Assaduras Bepantol', 25.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Lenços Umedecidos Huggies">
+        <img src="imagens/lencos_huggies.jpg" alt="Lenços Umedecidos Huggies">
         <p>Lenços Umedecidos Huggies</p>
         <p><strong>R$ 14,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Lenços Umedecidos Huggies', 14.90)">Adicionar ao Carrinho</button>
@@ -437,25 +427,25 @@
     <h2>Vitaminas</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Polivitamínico A-Z">
+        <img src="imagens/polivitaminico_az.jpg" alt="Polivitamínico A-Z">
         <p>Polivitamínico A-Z</p>
         <p><strong>R$ 18,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Polivitamínico A-Z', 18.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Vitamina C 500mg">
+        <img src="imagens/vitamina_c_500mg.jpg" alt="Vitamina C 500mg">
         <p>Vitamina C 500mg</p>
         <p><strong>R$ 9,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Vitamina C 500mg', 9.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Vitamina D 2000UI">
+        <img src="imagens/vitamina_d_2000ui.jpg" alt="Vitamina D 2000UI">
         <p>Vitamina D 2000UI</p>
         <p><strong>R$ 22,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Vitamina D 2000UI', 22.90)">Adicionar ao Carrinho</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Ômega 3">
+        <img src="imagens/omega_3.jpg" alt="Ômega 3">
         <p>Ômega 3</p>
         <p><strong>R$ 34,90</strong></p>
         <button class="add-to-cart" onclick="addToCart('Ômega 3', 34.90)">Adicionar ao Carrinho</button>
@@ -488,59 +478,50 @@
     let cart = [];
 
     function showSection(sectionId) {
-        console.log('Mostrando seção:', sectionId);
-        document.querySelectorAll('.section').forEach(section => {
-            section.classList.remove('active');
-        });
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.classList.add('active');
-        } else {
-            console.error('Seção não encontrada:', sectionId);
-        }
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
     }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        showSection('perfumaria');
-    });
+    showSection('perfumaria');
 
     function addToCart(productName, price) {
-        cart.push({ name: productName, price: price });
-        alert(`${productName} adicionado ao carrinho!`);
+      cart.push({ name: productName, price: price });
+      alert(`${productName} adicionado ao carrinho!`);
     }
 
     function toggleCart() {
-        const modal = document.getElementById('cart-modal');
-        modal.classList.toggle('active');
-        updateCartDisplay();
+      const modal = document.getElementById('cart-modal');
+      modal.classList.toggle('active');
+      updateCartDisplay();
     }
 
     function updateCartDisplay() {
-        const cartItems = document.getElementById('cart-items');
-        cartItems.innerHTML = '';
-        if (cart.length === 0) {
-            cartItems.innerHTML = '<p>Carrinho vazio.</p>';
-            return;
-        }
-        cart.forEach(item => {
-            const p = document.createElement('p');
-            p.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`;
-            cartItems.appendChild(p);
-        });
+      const cartItems = document.getElementById('cart-items');
+      cartItems.innerHTML = '';
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p>Carrinho vazio.</p>';
+        return;
+      }
+      cart.forEach(item => {
+        const p = document.createElement('p');
+        p.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`;
+        cartItems.appendChild(p);
+      });
     }
 
     function sendToWhatsApp() {
-        if (cart.length === 0) {
-            alert('Seu carrinho está vazio! Adicione produtos antes de finalizar.');
-            return;
-        }
-        const paymentMethod = document.getElementById('payment-method').value;
-        let total = cart.reduce((sum, item) => sum + item.price, 0);
-        let message = `Olá! Quero fazer um pedido:\n\nItens no carrinho:\n${cart.map(item => `${item.name} - R$ ${item.price.toFixed(2)}`).join('\n')}\n\nTotal: R$ ${total.toFixed(2)}\nForma de pagamento: ${paymentMethod}\nPor favor, confirme!`;
-        const whatsappUrl = `https://wa.me/556196592066?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-        cart = [];
-        document.getElementById('cart-modal').classList.remove('active');
+      if (cart.length === 0) {
+        alert('Seu carrinho está vazio! Adicione produtos antes de finalizar.');
+        return;
+      }
+      const paymentMethod = document.getElementById('payment-method').value;
+      let total = cart.reduce((sum, item) => sum + item.price, 0);
+      let message = `Olá! Quero fazer um pedido:\n\nItens no carrinho:\n${cart.map(item => `${item.name} - R$ ${item.price.toFixed(2)}`).join('\n')}\n\nTotal: R$ ${total.toFixed(2)}\nForma de pagamento: ${paymentMethod}\nPor favor, confirme!`;
+      const whatsappUrl = `https://wa.me/556196592066?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+      cart = [];
+      document.getElementById('cart-modal').classList.remove('active');
     }
   </script>
 </body>
